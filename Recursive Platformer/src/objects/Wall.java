@@ -2,7 +2,6 @@ package objects;
 
 import util.Point;
 import util.Style;
-import util.Textures;
 
 public class Wall extends GameObject {
 
@@ -14,13 +13,10 @@ public class Wall extends GameObject {
 		
 		switch (textureVarient) {
 		case 0:
-			texture = Textures.stone0;
 			break;
 		case 1:
-			texture = Textures.stone1;
 			break;
 		case 2:
-			texture = Textures.stone2;
 			break;
 		}
 		

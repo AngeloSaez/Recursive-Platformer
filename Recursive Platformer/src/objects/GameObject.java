@@ -16,10 +16,6 @@ public abstract class GameObject {
 	// Observer
 	private static Main main = Main.get();
 	
-	// Appreance
-	public BufferedImage[] textures;
-	public BufferedImage texture;
-
 	// Properties
 	public long birthTime;
 
@@ -177,7 +173,7 @@ public abstract class GameObject {
 	// Render
 	public void render(Graphics2D g) {
 		g.setColor(getColor());
-		g.drawImage(texture, (int) (position.x), (int) (position.y), (int) (drawWidth), (int) (drawHeight), main);
+		g.fillRect((int) (position.x), (int) (position.y), (int) (drawWidth), (int) (drawHeight));
 	}
 	
 	// Misc

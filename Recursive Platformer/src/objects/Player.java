@@ -1,10 +1,7 @@
 package objects;
 
-import java.awt.image.BufferedImage;
-
 import util.GravityData;
 import util.Style;
-import util.Textures;
 
 public class Player extends GameObject {
 	
@@ -22,12 +19,6 @@ public class Player extends GameObject {
 		this.saturation = 0.4f;
 		this.brightness = 0.95f;
 		
-		textures = new BufferedImage[] {
-				Textures.bluePlayer,
-				Textures.greenPlayer,
-				Textures.redPlayer,
-		};
-		texture = textures[0];
 	}
 	
 	public static Player get() {

@@ -1,11 +1,8 @@
 package objects;
 
-import java.util.ArrayList;
-
 import engine.Main;
 import util.Point;
 import util.Style;
-import util.Textures;
 
 public class Coin extends GameObject {
 	
@@ -20,7 +17,6 @@ public class Coin extends GameObject {
 		
 		this.randomOffset = Math.random();
 		this.anchorHeight = position.y;
-		this.texture = Textures.coin;
 		
 	}
 

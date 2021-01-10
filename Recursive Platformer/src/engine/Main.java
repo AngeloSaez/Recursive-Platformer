@@ -7,18 +7,13 @@ import java.awt.RenderingHints;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseWheelEvent;
-import java.awt.event.MouseWheelListener;
 import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
+import levels.Level_1_1;
 import states.Level;
-import states.WorldMap;
 import util.Style;
-import util.Textures;
 
 public class Main extends JFrame implements KeyListener {
 	
@@ -53,9 +48,6 @@ public class Main extends JFrame implements KeyListener {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 		
-		// Load textures
-		Textures.loadTextures();
-		
 		// Run setup
 		isRunning = true;
 	}
@@ -64,7 +56,7 @@ public class Main extends JFrame implements KeyListener {
 		if (instance == null) {
 			instance = new Main();
 			// Lazy initialization
-			GameStateManager.get().worldMap = new WorldMap();
+			GameStateManager.get().worldMap = new Level_1_1();
 			GameStateManager.get().currentState = GameStateManager.get().worldMap;
 		}
 		
